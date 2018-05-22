@@ -1,0 +1,120 @@
+.listThumbnails {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  max-width: 2300px;
+}
+
+.item{
+  width: 550px;
+  margin: 0;
+  padding: 20px;
+  list-style: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+.itemIMG {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+}
+.itemIMG:hover {
+  opacity: 0.7;
+}
+
+
+// overlay//////////////////////////////////////////////////////////////////////////////////////////////////////////
+#overlayCircle, #overlayRectangle, #overlaySquare, #overlayTriangle {
+  position: absolute;
+  background-color: #35b0bd;
+  background-size: cover;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: none;
+  width: 90%;
+  height: 100%;
+  min-width: 500px;
+  top: 2%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+#overlayCircleIMG, #overlayRectangleIMG, #overlaySquareIMG, #overlayTriangleIMG{
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+  margin: 5%;
+  position: relative;
+  background-size: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+.circleIMG {
+  background-image: url(/madia/new-zealand-679068_1920.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: fixed;
+}
+.rectangleIMG {
+  background-image: url(/madia/new-zealand-583176_1920.jpg);
+}
+.squareIMG {
+  background-image: url(/madia/new-zealand-583181_1920.jpg);
+}
+.triangleIMG {
+  background-image: url(/madia/sun-rise-661541_1920.jpg);
+}
+.overlayTitle {
+  width: 100%;
+  color: white;
+  padding: 1%;
+  margin: 0 auto;
+  font-size: 30px;
+  font-weight: bold;
+}
+#overlayCircleBTN, #overlayRectangleBTN, #overlaySquareBTN, #overlayTriangleBTN{
+  display: block;
+  width: 5%;
+  height: 5%;
+  background-color: #35b0bd;
+  border: none;
+  outline: none;
+  top: 1%;
+  right: -10%;
+  position: absolute;
+}
+// close/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.close {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 1%;
+  right: -10%;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 50px;
+  width: 1px;
+  background-color: white;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
