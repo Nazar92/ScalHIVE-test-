@@ -85,7 +85,7 @@ document.getElementById('right').onclick = turnRight;
 
 function turnRight() {
   var Right = document.getElementById('domino');
-  Right.style.transform = 'rotate(90deg)';
+  Right.style.transform = 'rotate(+90deg)';
 }
 
 
@@ -96,13 +96,9 @@ function dominoSize() {
   var domino=document.getElementById('domino');
    domino.style.width=rng.value+'9px';
 }
-// function dominoRotation() {
-//    var tran=document.getElementById('dominoRotation');
-//    var domino=document.getElementById('right');
-//   right.style.transition+transition-timing=tran.value+'1s';
-// }
-// function dominoRotation() {
-//    var tran=document.getElementById('dominoRotation');
-//    var domino=document.getElementById('left');
-//   left.style.transition=tran.value+'1s';
-// }
+///////////////////////////////////////Transition speed/////
+function dominoRotationSpeed() {
+   var tran=document.getElementById('dominoRotationSpeed');
+   var dominor=document.getElementById('domino');
+  dominor.style.transition=tran.value+'1ms ease all';
+}
