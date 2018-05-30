@@ -70,12 +70,12 @@ function Random() {
 }
   reset.onclick
 
-////////////////////////////////////////////////////////// <!-- ROTATE -->/////////////////////////////////////////////////
+////////////////////////////////////////////////////////// <!-- ROTATE -->////////////////////////////
 /////////////////////////////////////////////////////////// <!-- LEFT -->
 document.getElementById('left').onclick = turnLeft;
 
 function turnLeft() {
-  var Left = document.getElementById('conteinerDomino');
+  var Left = document.getElementById('domino');
   Left.style.transform = 'rotate(-90deg)';
 }
 
@@ -84,6 +84,25 @@ function turnLeft() {
 document.getElementById('right').onclick = turnRight;
 
 function turnRight() {
-  var Right = document.getElementById('conteinerDomino');
+  var Right = document.getElementById('domino');
   Right.style.transform = 'rotate(90deg)';
 }
+
+
+
+////////////////////////////////////////////////////////////Size + Rotation
+function dominoSize() {
+  var rng=document.getElementById('dominoSize');
+  var domino=document.getElementById('domino');
+   domino.style.width=rng.value+'9px';
+}
+// function dominoRotation() {
+//    var tran=document.getElementById('dominoRotation');
+//    var domino=document.getElementById('right');
+//   right.style.transition+transition-timing=tran.value+'1s';
+// }
+// function dominoRotation() {
+//    var tran=document.getElementById('dominoRotation');
+//    var domino=document.getElementById('left');
+//   left.style.transition=tran.value+'1s';
+// }
