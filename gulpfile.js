@@ -26,7 +26,8 @@ gulp.task("js", function() {
 
 gulp.task("copy", function () {
   return gulp.src ([
-    "src/madia/*.png",
+    "src/madia/**/*.png",
+    "src/madia/**/*.PNG",
     "src/madia/*.jpg"
   ])
     .pipe(gulp.dest("dist/madia"));

@@ -15,7 +15,7 @@
     <button  
       type="button" 
       id="reset" 
-      onclick="Random()"
+      onclick="resetform()"
     >
         Reset
     </button>
@@ -28,23 +28,31 @@
     </button>
   </div>
   <div class="dominoSectionBottom">
-    <p class="titleSize">Domino size</p>
-    <div class="size">
-    <input 
-      type="range"
-      id="dominoSize" 
-      oninput="dominoSize()"
-      >
-    </div>
+    <p class="titleType">Domino Type</p>
+    <form class="type" >
+      <select name="dominoType" id="dominoType" onchange="Random()">
+        <option value='0' id="whiteDomino" class="dominoName">White Domino</option>
+        <option value='1' id="blackDomino" class="dominoName">Black Domino</option>
+      </select>
+    </form>
+    
+      <p class="titleSize">Domino size</p>
+      <div class="size">
+        <input 
+          type="range"
+          id="dominoSize" 
+          oninput="dominoSize()"
+        >
+      </div>
     <p class="titleRotation">Domino rotation speed</p>
     <div class="rotation">
-    <input 
-      type="range"
-      id="dominoRotationSpeed" 
-      oninput="dominoRotationSpeed()"
+      <input 
+        type="range"
+        id="dominoRotationSpeed" 
+        oninput="dominoRotationSpeed()"
       >
     </div>
-   
+  
   </div>
 </div>
 
