@@ -1,0 +1,347 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+  background-color: #35b0bd;
+  background-size: cover;
+}
+.contentConteiner {
+  padding: 0;
+  margin: 0 auto;
+  width: 85%;
+  min-width: 550px;
+}
+.header {
+  text-align: center;
+  margin: 30px 0;
+  padding: 0;
+  color: white;
+}
+.headerTop {
+  padding: 0;
+  margin: 30px auto;
+}
+.headerTitle {
+  min-width: 550px;
+  padding: 0;
+  margin: 0 auto ;
+  font-size: 50px;
+  font-weight: bolder;
+  line-height: 2em;
+}
+.headerTop {
+  padding: 0;
+  margin: 0 auto;
+}
+.headerDesc {
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 65%;
+  font-size: 17px;
+  min-width: 550px;
+}
+.listThumbnails {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  max-width: 2300px;
+}
+.item {
+  width: 550px;
+  margin: 0;
+  padding: 20px;
+  list-style: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+.itemIMG {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+}
+.itemIMG:hover {
+  opacity: 0.7;
+}
+#overlayCircle,
+#overlayRectangle,
+#overlaySquare,
+#overlayTriangle {
+  position: absolute;
+  background-color: #35b0bd;
+  background-size: cover;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1%;
+  display: none;
+  width: 90%;
+  height: 100%;
+  min-width: 500px;
+  top: 2%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+#overlayCircleIMG,
+#overlayRectangleIMG,
+#overlaySquareIMG,
+#overlayTriangleIMG {
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.circleIMG {
+  background-image: url(/madia/new-zealand-679068_1920.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: fixed;
+}
+.rectangleIMG {
+  background-image: url(/madia/new-zealand-583176_1920.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: fixed;
+}
+.squareIMG {
+  background-image: url(/madia/new-zealand-583181_1920.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: fixed;
+}
+.triangleIMG {
+  background-image: url(/madia/sun-rise-661541_1920.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: fixed;
+}
+.overlayTitle {
+  width: 100%;
+  color: white;
+  padding: 1%;
+  margin: 0 auto;
+  font-size: 30px;
+  font-weight: bold;
+}
+#overlayCircleBTN,
+#overlayRectangleBTN,
+#overlaySquareBTN,
+#overlayTriangleBTN {
+  display: block;
+  width: 5%;
+  height: 5%;
+  background-color: #35b0bd;
+  border: none;
+  outline: none;
+  top: 1%;
+  right: -5%;
+  position: absolute;
+}
+.close {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 1%;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 50px;
+  width: 1px;
+  background-color: white;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+.dominoSection {
+  width: 100%;
+  border: 1px solid red;
+  margin: 0;
+  background-color: white;
+  min-width: 560px;
+  text-align: center;
+  background-size: cover;
+}
+.dominoSectionTop {
+  padding: 0;
+  margin: 40px auto 10px;
+  width: 100%;
+  height: 600px;
+  text-align: center;
+}
+.dominoSectionTop img {
+  padding: 0;
+  margin: 0;
+  max-width: 200px;
+  min-width: 20px;
+  width: 100%;
+  height: 100%;
+}
+#domino {
+  top: 5%;
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  min-width: 80px;
+  max-width: 380px;
+}
+.dominoList {
+  position: relative;
+  border: 4px solid black;
+  border-radius: 5px;
+  padding: 2%;
+  margin: 0 auto;
+  max-width: 65%;
+  min-width: 30%;
+  max-height: 600px;
+  min-height: 100px;
+}
+li {
+  list-style: none;
+}
+.dominoSectionCenter {
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+#left,
+#right {
+  width: 100px;
+  height: 30px;
+  color: white;
+  background-color: #3d3f5a;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+#left:active {
+  background-color: red;
+  color: black;
+}
+#right:active {
+  background-color: red;
+  color: black;
+}
+#reset {
+  margin: 0 -10px;
+  width: 100px;
+  height: 30px;
+  color: white;
+  background-color: red;
+  border: none;
+  outline: none;
+}
+#reset:active {
+  background-color: #3d3f5a;
+}
+.dominoSectionBottom {
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.titleType {
+  margin: 0;
+  padding: 0 0 1% 5%;
+  text-align: left;
+}
+#dominoType {
+  width: 100%;
+  position: relative;
+  padding: 10px;
+}
+select {
+  width: 100%;
+  padding: -5px;
+  margin: 0;
+  border: none;
+  outline: none;
+  background-color: #b6ccce;
+}
+.type {
+  padding: 0;
+  margin: 0 auto;
+  border: 1px solid grey;
+  width: 90%;
+  border-radius: 4px;
+}
+#dominoPositionSel {
+  width: 100%;
+  position: relative;
+  padding: 10px;
+}
+.dominoPosition {
+  padding: 0;
+  margin: 0 auto;
+  border: 1px solid grey;
+  width: 90%;
+  border-radius: 4px;
+}
+.titleSize {
+  text-align: left;
+  padding: 0;
+  margin: 1% 0 1% 5%;
+}
+.size {
+  padding: 3px;
+  margin: 0 auto;
+  border: 1px solid grey;
+  width: 90%;
+  border-radius: 4px;
+}
+#dominoSize {
+  width: 95%;
+  position: relative;
+  padding: 5px;
+  outline: none;
+}
+.titleRotation {
+  text-align: left;
+  padding: 0;
+  margin: 1% 0 1% 5%;
+}
+.rotation {
+  padding: 3px;
+  margin: 0 auto;
+  border: 1px solid grey;
+  width: 90%;
+  border-radius: 4px;
+}
+#dominoRotationSpeed {
+  width: 95%;
+  position: relative;
+  padding: 5px;
+  outline: none;
+}

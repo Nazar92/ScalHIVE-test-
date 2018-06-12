@@ -2,8 +2,18 @@
   <div 
     class="dominoSectionTop" 
     id="conteinerDomino">
-    <span id="domino"></span>
+    <span id="domino">
+      <ul class="dominoList" id="dominoList">
+        <li class="dominoTop" id="dominoTop">
+          
+        </li>
+        <hr>
+        <li class="dominoBottom" id="dominoBottom"></li>
+      </ul>
+      </span>
   </div>
+
+  <!-- ////////////////////////////////////////Section button/////////////////////////////////////////////// -->
   <div class="dominoSectionCenter" >
     <button  
       type="button" 
@@ -27,32 +37,50 @@
         Rotate right
     </button>
   </div>
+  <!-- //////////////////////////////////////Section select TOP or BOTTOM/////////////////////////////////////////////////// -->
   <div class="dominoSectionBottom">
-    <p class="titleType">Domino Type</p>
-    <form class="type" >
-      <select name="dominoType" id="dominoType" onchange="Random()">
-        <option value='0' id="whiteDomino" class="dominoName">White Domino</option>
-        <option value='1' id="blackDomino" class="dominoName">Black Domino</option>
+    <p class="titleType">Domino Section</p>
+    <form class="type" id="">
+      <select name="dominoType" id="dominoType" onchange="Sel()">
+        <option value="0" id="dominoTypeTop" class="dominoName">Top</option>
+        <option value="1" id="dominoTypeBottom" class="dominoName">Bottom</option>
       </select>
     </form>
-    
+    <form class="dominoPosition" id="dominoPosition" style="display:none">
+      <select name="dominoPositionSel" id="dominoPositionSel" onchange="downTop()">
+        <option value="0" id="dominoPositionFirst" class="dominoPositionName">None</option>
+        <option value="1" id="dominoTypeSecond" class="dominoPositionName">One</option>
+        <option value="2" id="dominoTypeThird" class="dominoPositionName">Two</option>
+        <option value="3" id="dominoTypeFourth" class="dominoPositionName">Three</option>
+        <option value="4" id="dominoTypeFifth" class="dominoPositionName">Four</option>
+        <option value="5" id="dominoTypeSixth" class="dominoPositionName">Five</option>
+        <option value="6" id="dominoTypeSeventh" class="dominoPositionName">Six</option>
+      </select>
+    </form>
+    <!-- ////////////////////////////////////////Section Size + Rotation///////////////////////////////////// -->
+    <span id="myform">
       <p class="titleSize">Domino size</p>
       <div class="size">
         <input 
           type="range"
           id="dominoSize" 
           oninput="dominoSize()"
+          value="50"
+          step="1"
+          min="1px"
+          max="10px"
         >
       </div>
-    <p class="titleRotation">Domino rotation speed</p>
-    <div class="rotation">
-      <input 
-        type="range"
-        id="dominoRotationSpeed" 
-        oninput="dominoRotationSpeed()"
-      >
-    </div>
-  
+      <p class="titleRotation">Domino rotation speed</p>
+      <div class="rotation">
+        <input 
+          type="range"
+          id="dominoRotationSpeed" 
+          oninput="dominoRotationSpeed()"
+          min="50" max="200" step="1"
+        >
+      </div>
+    </span>
   </div>
 </div>
 

@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Brand</title>
+  <link rel="stylesheet" href="/css/app.min.css">
+</head>
+<body onload="Random()">
+  
+  
+<!-- start header.html-->
+<div class="contentConteiner">
+  <div class="header" id="top">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="headerTop ">
+          <p class="headerTitle">New Zealand</p>
+        </div>
+        <div class="headerBottom ">
+          <p class="headerDesc">This project might be trickier than it seems. 
+            Look around carefully. What you see? The sky is blue, the grass is green. 
+            The sun shines through the window.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end header.html-->
+
+    
+    <section>
+<!-- start gallary.html-->
+        <div class="contentConteiner">
+            <ul class="listThumbnails ">
+                <li class="item  ">
+                    <div id="overlayCircle">
+                        <p class="overlayTitle">Lake Wakatipu</p>
+                        <button id="overlayCircleBTN" onclick="circleOFF()">
+                            <div class="close"></div>
+                        </button>
+                        <div id="overlayCircleIMG" class="circleIMG"></div>
+                    </div>
+                    <a href="#top">
+                        <img src="/madia/1.png" alt="img" class="itemIMG" onclick="circleON()">   
+                    </a>
+                </li>
+                <li class="item  ">
+                    <div id="overlayRectangle">
+                        <p class="overlayTitle">Lake Wakatipu</p>
+                        <button id="overlayRectangleBTN" onclick="RectangleOFF()">
+                            <div class="close"></div>
+                        </button>
+                        <div id="overlayRectangleIMG" class="rectangleIMG"></div>
+                    </div>
+                    <a href="#top">
+                        <img src="/madia/2.png" alt="img" class="itemIMG" onclick="RectangleON()">
+                    </a>
+                </li>
+                <li class="item">
+                    <div id="overlaySquare">
+                        <p class="overlayTitle">Lake Wakatipu</p>
+                        <button id="overlaySquareBTN" onclick="SquareOFF()">
+                            <div class="close"></div>
+                        </button>
+                        <div id="overlaySquareIMG" class="squareIMG"></div>
+                    </div>
+                    <a href="#top">
+                        <img src="/madia/3.png" alt="img" class="itemIMG" onclick="SquareON()">
+                    </a>
+                </li>
+                <li class="item ">
+                    <div id="overlayTriangle">
+                        <p class="overlayTitle">Lake Wakatipu</p>
+                        <button id="overlayTriangleBTN" onclick="TriangleOFF()">
+                            <div class="close"></div>
+                        </button>
+                        <div id="overlayTriangleIMG" class="triangleIMG"></div>
+                    </div>
+                    <a href="#top">
+                        <img src="/madia/4.png" alt="img" class="itemIMG" onclick="TriangleON()">   
+                    </a>    
+                </li>               
+            </ul>  
+        </div>
+
+<!-- end gallary.html-->
+    </section>
+
+    <section>
+<!-- start domino.html-->
+<div class="dominoSection">
+  <div 
+    class="dominoSectionTop" 
+    id="conteinerDomino">
+    <span id="domino">
+      <ul class="dominoList" id="dominoList">
+        <li class="dominoTop" id="dominoTop">
+          
+        </li>
+        <hr>
+        <li class="dominoBottom" id="dominoBottom"></li>
+      </ul>
+      </span>
+  </div>
+
+  <!-- ////////////////////////////////////////Section button/////////////////////////////////////////////// -->
+  <div class="dominoSectionCenter" >
+    <button  
+      type="button" 
+      id="left"
+      onclick="turnLeft()"
+    >
+        Rotate left
+    </button>
+    <button  
+      type="button" 
+      id="reset" 
+      onclick="resetform()"
+    >
+        Reset
+    </button>
+    <button  
+      type="button" 
+      id="right" 
+      onclick="turnRight()"
+    >
+        Rotate right
+    </button>
+  </div>
+  <!-- //////////////////////////////////////Section select TOP or BOTTOM/////////////////////////////////////////////////// -->
+  <div class="dominoSectionBottom">
+    <p class="titleType">Domino Section</p>
+    <form class="type" id="">
+      <select name="dominoType" id="dominoType" onchange="Sel()">
+        <option value="0" id="dominoTypeTop" class="dominoName">Top</option>
+        <option value="1" id="dominoTypeBottom" class="dominoName">Bottom</option>
+      </select>
+    </form>
+    <form class="dominoPosition" id="dominoPosition" style="display:none">
+      <select name="dominoPositionSel" id="dominoPositionSel" onchange="downTop()">
+        <option value="0" id="dominoPositionFirst" class="dominoPositionName">None</option>
+        <option value="1" id="dominoTypeSecond" class="dominoPositionName">One</option>
+        <option value="2" id="dominoTypeThird" class="dominoPositionName">Two</option>
+        <option value="3" id="dominoTypeFourth" class="dominoPositionName">Three</option>
+        <option value="4" id="dominoTypeFifth" class="dominoPositionName">Four</option>
+        <option value="5" id="dominoTypeSixth" class="dominoPositionName">Five</option>
+        <option value="6" id="dominoTypeSeventh" class="dominoPositionName">Six</option>
+      </select>
+    </form>
+    <!-- ////////////////////////////////////////Section Size + Rotation///////////////////////////////////// -->
+    <span id="myform">
+      <p class="titleSize">Domino size</p>
+      <div class="size">
+        <input 
+          type="range"
+          id="dominoSize" 
+          oninput="dominoSize()"
+          value="50"
+          step="1"
+          min="1px"
+          max="10px"
+        >
+      </div>
+      <p class="titleRotation">Domino rotation speed</p>
+      <div class="rotation">
+        <input 
+          type="range"
+          id="dominoRotationSpeed" 
+          oninput="dominoRotationSpeed()"
+          min="50" max="200" step="1"
+        >
+      </div>
+    </span>
+  </div>
+</div>
+
+
+
+
+<!-- end domino.html-->
+    </section>
+
+    
+
+
+  <script src="/js/app.min.js"></script>
+</body>
+</html>
+ 
+
+
+
+
+
