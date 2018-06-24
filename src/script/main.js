@@ -33,40 +33,9 @@ function TriangleOFF () {
 
 ////////////////////////////////////////////////Domino section/////////////////////////////////////////////////
 window.onload=function() {
-  Random();
+//   // Random();
   runBot();
 };
-/////////////////////////////////// Random function for TOP side domino //////////////////////////////////////
-function Random() {
-  var  
-    a=Math.round(Math.random()*7)
-    imageTop = new Array();
-    imageTop[0]="/madia/domino-1.png"
-    imageTop[1]="/madia/domino-2.png"
-    imageTop[2]="/madia/domino-3.png"
-    imageTop[3]="/madia/domino-4.png"
-    imageTop[4]="/madia/domino-5.png"
-    imageTop[5]="/madia/domino-6.png"
-    imageTop[6]="/madia/domino-7.png"
-    
-    dominoTop.innerHTML = ("<img src="+imageTop[a]+">");
-};
-/////////////////////////////////// Random function for BOTTOM side domino ///////////////////////////////////
-function runBot() {
-  var 
-    b=Math.round(Math.random()*7)
-    imageBottom = new Array();
-    imageBottom[0]="/madia/domino-8.png"
-    imageBottom[1]="/madia/domino-9.png"
-    imageBottom[2]="/madia/domino-10.png"
-    imageBottom[3]="/madia/domino-11.png"
-    imageBottom[4]="/madia/domino-12.png"
-    imageBottom[5]="/madia/domino-13.png"
-    imageBottom[6]="/madia/domino-14.png"
-  
-  dominoBottom.innerHTML = ("<img src="+imageBottom[b]+">");
-};
-
 
 //////////////////////////////////////////////////////////// Selected = top or bottom /////////////////////////
 function Sel() {
@@ -80,37 +49,164 @@ function Sel() {
 function downTop(Sel) {
   if (dominoType[0].selected) {
     if (dominoPositionSel[0].selected) {
-      dominoTop.innerHTML = ("<img src="+imageTop[0]+">"); 
-      } else if (dominoPositionSel[1].selected) {
-        dominoTop.innerHTML = ("<img src="+imageTop[1]+">");  
-      } else if (dominoPositionSel[2].selected) {
-        dominoTop.innerHTML = ("<img src="+imageTop[2]+">");  
-      } else if (dominoPositionSel[3].selected) {
-        dominoTop.innerHTML = ("<img src="+imageTop[3]+">");  
-      } else if (dominoPositionSel[4].selected) {
-        dominoTop.innerHTML = ("<img src="+imageTop[4]+">");  
-      } else if (dominoPositionSel[5].selected) {
-        dominoTop.innerHTML = ("<img src="+imageTop[5]+">");  
-      } else if (dominoPositionSel[6].selected) {
-        dominoTop.innerHTML = ("<img src="+imageTop[6]+">");  
-      }
+      dominoItemImgTop1.style="opacity:0";
+      dominoItemImgTop2.style="opacity:0";
+      dominoItemImgTop3.style="opacity:0";
+      dominoItemImgTop4.style="opacity:0";
+      dominoItemImgTop5.style="opacity:0";
+      dominoItemImgTop6.style="opacity:0";
+      dominoItemImgTop7.style="opacity:0";
+      dominoItemImgTop8.style="opacity:0";
+      dominoItemImgTop9.style="opacity:0";
+    } else if (dominoPositionSel[1].selected) {
+      dominoItemImgTop1.style="opacity:0";
+      dominoItemImgTop2.style="opacity:0";
+      dominoItemImgTop3.style="opacity:0";
+      dominoItemImgTop4.style="opacity:0";
+      dominoItemImgTop5.style="opacity:1";
+      dominoItemImgTop6.style="opacity:0";
+      dominoItemImgTop7.style="opacity:0";
+      dominoItemImgTop8.style="opacity:0";
+      dominoItemImgTop9.style="opacity:0";
+    } else if (dominoPositionSel[2].selected) {
+      dominoItemImgTop1.style="opacity:0";
+      dominoItemImgTop2.style="opacity:0";
+      dominoItemImgTop3.style="opacity:1";
+      dominoItemImgTop4.style="opacity:0";
+      dominoItemImgTop5.style="opacity:0";
+      dominoItemImgTop6.style="opacity:0";
+      dominoItemImgTop7.style="opacity:1";
+      dominoItemImgTop8.style="opacity:0";
+      dominoItemImgTop9.style="opacity:0";
+    } else if (dominoPositionSel[3].selected) {
+      dominoItemImgTop1.style="opacity:0";
+      dominoItemImgTop2.style="opacity:0";
+      dominoItemImgTop3.style="opacity:1";
+      dominoItemImgTop4.style="opacity:0";
+      dominoItemImgTop5.style="opacity:1";
+      dominoItemImgTop6.style="opacity:0";
+      dominoItemImgTop7.style="opacity:1";
+      dominoItemImgTop8.style="opacity:0";
+      dominoItemImgTop9.style="opacity:0";
+    } else if (dominoPositionSel[4].selected) {
+      dominoItemImgTop1.style="opacity:1";
+      dominoItemImgTop2.style="opacity:0";
+      dominoItemImgTop3.style="opacity:1";
+      dominoItemImgTop4.style="opacity:0";
+      dominoItemImgTop5.style="opacity:0";
+      dominoItemImgTop6.style="opacity:0";
+      dominoItemImgTop7.style="opacity:1";
+      dominoItemImgTop8.style="opacity:0";
+      dominoItemImgTop9.style="opacity:1";
+    } else if (dominoPositionSel[5].selected) {
+      dominoItemImgTop1.style="opacity:1";
+      dominoItemImgTop2.style="opacity:0";
+      dominoItemImgTop3.style="opacity:1";
+      dominoItemImgTop4.style="opacity:0";
+      dominoItemImgTop5.style="opacity:1";
+      dominoItemImgTop6.style="opacity:0";
+      dominoItemImgTop7.style="opacity:1";
+      dominoItemImgTop8.style="opacity:0";
+      dominoItemImgTop9.style="opacity:1";
+    } else if (dominoPositionSel[6].selected) {
+      dominoItemImgTop1.style="opacity:1";
+      dominoItemImgTop2.style="opacity:0";
+      dominoItemImgTop3.style="opacity:1";
+      dominoItemImgTop4.style="opacity:1";
+      dominoItemImgTop5.style="opacity:0";
+      dominoItemImgTop6.style="opacity:1";
+      dominoItemImgTop7.style="opacity:1";
+      dominoItemImgTop8.style="opacity:0";
+      dominoItemImgTop9.style="opacity:1";
+    }
   } else if (dominoType[1].selected) {
     if (dominoPositionSel[0].selected) {
-      dominoBottom.innerHTML = ("<img src="+imageBottom[0]+">"); 
-      } else if (dominoPositionSel[1].selected) {
-        dominoBottom.innerHTML = ("<img src="+imageBottom[1]+">");  
-      } else if (dominoPositionSel[2].selected) {
-        dominoBottom.innerHTML = ("<img src="+imageBottom[2]+">");  
-      } else if (dominoPositionSel[3].selected) {
-        dominoBottom.innerHTML = ("<img src="+imageBottom[3]+">");  
-      } else if (dominoPositionSel[4].selected) {
-        dominoBottom.innerHTML = ("<img src="+imageBottom[4]+">");  
-      } else if (dominoPositionSel[5].selected) {
-        dominoBottom.innerHTML = ("<img src="+imageBottom[5]+">");  
-      } else if (dominoPositionSel[6].selected) {
-        dominoBottom.innerHTML = ("<img src="+imageBottom[6]+">");  
-      }
-  }  
+      dominoItemImgBottom1.style="opacity:0";
+      dominoItemImgBottom2.style="opacity:0";
+      dominoItemImgBottom3.style="opacity:0";
+      dominoItemImgBottom4.style="opacity:0";
+      dominoItemImgBottom5.style="opacity:0";
+      dominoItemImgBottom6.style="opacity:0";
+      dominoItemImgBottom7.style="opacity:0";
+      dominoItemImgBottom8.style="opacity:0";
+      dominoItemImgBottom9.style="opacity:0";
+    } else if (dominoPositionSel[1].selected) {
+      dominoItemImgBottom1.style="opacity:0";
+      dominoItemImgBottom2.style="opacity:0";
+      dominoItemImgBottom3.style="opacity:0";
+      dominoItemImgBottom4.style="opacity:0";
+      dominoItemImgBottom5.style="opacity:1";
+      dominoItemImgBottom6.style="opacity:0";
+      dominoItemImgBottom7.style="opacity:0";
+      dominoItemImgBottom8.style="opacity:0";
+      dominoItemImgBottom9.style="opacity:0";
+    } else if (dominoPositionSel[2].selected) {
+      dominoItemImgBottom1.style="opacity:0";
+      dominoItemImgBottom2.style="opacity:0";
+      dominoItemImgBottom3.style="opacity:1";
+      dominoItemImgBottom4.style="opacity:0";
+      dominoItemImgBottom5.style="opacity:0";
+      dominoItemImgBottom6.style="opacity:0";
+      dominoItemImgBottom7.style="opacity:1";
+      dominoItemImgBottom8.style="opacity:0";
+      dominoItemImgBottom9.style="opacity:0";
+    } else if (dominoPositionSel[3].selected) {
+      dominoItemImgBottom1.style="opacity:0";
+      dominoItemImgBottom2.style="opacity:0";
+      dominoItemImgBottom3.style="opacity:1";
+      dominoItemImgBottom4.style="opacity:0";
+      dominoItemImgBottom5.style="opacity:1";
+      dominoItemImgBottom6.style="opacity:0";
+      dominoItemImgBottom7.style="opacity:1";
+      dominoItemImgBottom8.style="opacity:0";
+      dominoItemImgBottom9.style="opacity:0";
+    } else if (dominoPositionSel[4].selected) {
+      dominoItemImgBottom1.style="opacity:1";
+      dominoItemImgBottom2.style="opacity:0";
+      dominoItemImgBottom3.style="opacity:1";
+      dominoItemImgBottom4.style="opacity:0";
+      dominoItemImgBottom5.style="opacity:0";
+      dominoItemImgBottom6.style="opacity:0";
+      dominoItemImgBottom7.style="opacity:1";
+      dominoItemImgBottom8.style="opacity:0";
+      dominoItemImgBottom9.style="opacity:1";
+    } else if (dominoPositionSel[5].selected) {
+      dominoItemImgBottom1.style="opacity:1";
+      dominoItemImgBottom2.style="opacity:0";
+      dominoItemImgBottom3.style="opacity:1";
+      dominoItemImgBottom4.style="opacity:0";
+      dominoItemImgBottom5.style="opacity:1";
+      dominoItemImgBottom6.style="opacity:0";
+      dominoItemImgBottom7.style="opacity:1";
+      dominoItemImgBottom8.style="opacity:0";
+      dominoItemImgBottom9.style="opacity:1";
+    } else if (dominoPositionSel[6].selected) {
+      dominoItemImgBottom1.style="opacity:1";
+      dominoItemImgBottom2.style="opacity:0";
+      dominoItemImgBottom3.style="opacity:1";
+      dominoItemImgBottom4.style="opacity:1";
+      dominoItemImgBottom5.style="opacity:0";
+      dominoItemImgBottom6.style="opacity:1";
+      dominoItemImgBottom7.style="opacity:1";
+      dominoItemImgBottom8.style="opacity:0";
+      dominoItemImgBottom9.style="opacity:1";
+    }
+    // if (dominoPositionSel[0].selected) {
+    //   dominoTop.innerHTML = ("<img src="+imageTop[0]+">"); 
+    //   } else if (dominoPositionSel[1].selected) {
+    //     dominoTop.innerHTML = ("<img src="+imageTop[1]+">");  
+    //   } else if (dominoPositionSel[2].selected) {
+    //     dominoTop.innerHTML = ("<img src="+imageTop[2]+">");  
+    //   } else if (dominoPositionSel[3].selected) {
+    //     dominoTop.innerHTML = ("<img src="+imageTop[3]+">");  
+    //   } else if (dominoPositionSel[4].selected) {
+    //     dominoTop.innerHTML = ("<img src="+imageTop[4]+">");  
+    //   } else if (dominoPositionSel[5].selected) {
+    //     dominoTop.innerHTML = ("<img src="+imageTop[5]+">");  
+    //   } else if (dominoPositionSel[6].selected) {
+    //     dominoTop.innerHTML = ("<img src="+imageTop[6]+">");  
+    //   }
+  } 
 };
 
 ////////////////////////////////////////////////////////// <!-- ROTATE -->///////////////////////////////////////////////////////////////////////////////////////////////
@@ -131,9 +227,8 @@ function turnRight() {
 ////////////////////////////////////////////////////////////Size + Rotation//////////
 function dominoSize() {
   var rng=document.getElementById('dominoSize');
-  var domino=document.getElementById('domino');
-   domino.style.width=rng.value+'2px';
-  // domino.style.scale=rng.value+'1dec';
+  var domino=document.getElementById('dominoListIMG');
+  domino.style.width=rng.value+"1px";
 }
 
 //////////////////////////////////////////////////////////Transition speed///////////

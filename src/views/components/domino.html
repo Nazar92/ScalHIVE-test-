@@ -3,14 +3,30 @@
     class="dominoSectionTop" 
     id="conteinerDomino">
     <span id="domino">
-      <ul class="dominoList" id="dominoList">
-        <li class="dominoTop" id="dominoTop">
+        <ul class="dominoListIMG" id="dominoListIMG">
+          <li class="dominoItemIMG" id="dominoItemImgTop1" style="opacity:0"></li>
+          <li class="dominoItemIMG" id="dominoItemImgTop2" style="opacity:0"></li>
+          <li class="dominoItemIMG" id="dominoItemImgTop3" style="opacity:0"></li>
+          <li class="dominoItemIMG" id="dominoItemImgTop4" style="opacity:0"></li>
+          <li class="dominoItemIMG" id="dominoItemImgTop5" style="opacity:0"></li>
+          <li class="dominoItemIMG" id="dominoItemImgTop6" style="opacity:0"></li>
+          <li class="dominoItemIMG" id="dominoItemImgTop7" style="opacity:0"></li>
+          <li class="dominoItemIMG" id="dominoItemImgTop8" style="opacity:0"></li>
+          <li class="dominoItemIMG" id="dominoItemImgTop9" style="opacity:0"></li>
           
-        </li>
-        <hr>
-        <li class="dominoBottom" id="dominoBottom"></li>
-      </ul>
-      </span>
+          <hr>
+
+          <li class="dominoItemIMG" id="dominoItemImgBottom1" style="opacity:0"></li>
+          <li class="dominoItemIMG" id="dominoItemImgBottom2" style="opacity:0"></li>
+          <li class="dominoItemIMG" id="dominoItemImgBottom3" style="opacity:0"></li>
+          <li class="dominoItemIMG" id="dominoItemImgBottom4" style="opacity:0"></li>
+          <li class="dominoItemIMG" id="dominoItemImgBottom5" style="opacity:0"></li>
+          <li class="dominoItemIMG" id="dominoItemImgBottom6" style="opacity:0"></li>
+          <li class="dominoItemIMG" id="dominoItemImgBottom7" style="opacity:0"></li>
+          <li class="dominoItemIMG" id="dominoItemImgBottom8" style="opacity:0"></li>
+          <li class="dominoItemIMG" id="dominoItemImgBottom9" style="opacity:0"></li>
+        </ul>
+    </span>
   </div>
 
   <!-- ////////////////////////////////////////Section button/////////////////////////////////////////////// -->
@@ -65,10 +81,10 @@
           type="range"
           id="dominoSize" 
           oninput="dominoSize()"
-          value="50"
+          value="25"
           step="1"
-          min="1px"
-          max="10px"
+          min="15"
+          max="35"
         >
       </div>
       <p class="titleRotation">Domino rotation speed</p>
@@ -77,12 +93,17 @@
           type="range"
           id="dominoRotationSpeed" 
           oninput="dominoRotationSpeed()"
-          min="50" max="200" step="1"
+          value="235"
+          step="1"
+          min="120"
+          max="350"
         >
       </div>
     </span>
   </div>
 </div>
+
+
 
 
 
